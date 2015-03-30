@@ -143,6 +143,45 @@ public class RPCSCreateAccountFrame {
 		mnEdit = new JMenu("Edit");
 		menuBar.add(mnEdit);
 		
+		mntmEditPersonalDetails = new JMenuItem("Edit Personal Details");
+		mnEdit.add(mntmEditPersonalDetails);
+		
+		//move later
+		//test = new JLabel(concatenateString);
+		//test.setBounds(100, 100, 200, 50);
+		//frame.getContentPane().add(test);
+		
+		
+		requiredField = new JLabel("Please fill all fields!");
+		frame.getContentPane().add(requiredField);
+		
+		btnCreateAccount.addActionListener(new ActionListener(){
+		
+			public void actionPerformed(ActionEvent e){
+				String concatenateString = email.getText() + "/" + firstName.getText() + "/" + lastName.getText() 
+						 + "/" + password.getText() + "/" + passwordConfirm.getText();
+				if(rdbtnDoctor.isSelected()){
+					concatenateString += "/Doctor";
+				}else if(rdbtnNurse.isSelected()){
+					concatenateString += "/Nurse";
+				}else{
+					requiredField.setBounds(300,13,400,20);
+				}
+				System.out.println(concatenateString); //test on the console if strings are concatenated
+				
+				
+				//checks if any fields are empty
+				if(firstName.getText().equals("") || lastName.getText().equals("") || 
+						email.getText().equals("") || password.getText().equals("") ||
+						passwordConfirm.getText().equals("")){
+					requiredField.setBounds(300,13,400,20);
+				}
+				
+				//******
+				//THIS METHOD IS TO BE IMPLEMENTED IN THE FUTURE VERSIONS
+				//AccountParser(concatenateString)
+			}
+		});
 		
 	}
 }
