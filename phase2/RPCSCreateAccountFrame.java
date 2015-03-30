@@ -1,21 +1,14 @@
 import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-import java.awt.GridBagLayout;
-import java.awt.FlowLayout;
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
-import com.jgoodies.forms.factories.FormFactory;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import javax.swing.JMenuBar;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
-import javax.swing.JPasswordField;
-import javax.swing.JLabel;
-import javax.swing.JRadioButton;
-import javax.swing.ButtonGroup;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.io.*;
+//import com.jgoodies.forms.layout.FormLayout;
+//import com.jgoodies.forms.layout.ColumnSpec;
+//import com.jgoodies.forms.layout.RowSpec;
+//import com.jgoodies.forms.factories.FormFactory;
 
 
 public class RPCSCreateAccountFrame {
@@ -41,7 +34,10 @@ public class RPCSCreateAccountFrame {
 	private JRadioButton rdbtnNurse;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private JLabel lblOccupation;
-
+	private JLabel requiredField;
+	
+	private JLabel test;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -74,6 +70,7 @@ public class RPCSCreateAccountFrame {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
+		
 		firstName = new JTextField();
 		firstName.setBounds(131, 16, 126, 20);
 		firstName.setColumns(15);
@@ -85,7 +82,7 @@ public class RPCSCreateAccountFrame {
 		frame.getContentPane().add(email);
 		
 		btnCreateAccount = new JButton("Create Account");
-		btnCreateAccount.setBounds(317, 201, 107, 23);
+		btnCreateAccount.setBounds(317, 201, 127, 23);
 		frame.getContentPane().add(btnCreateAccount);
 		
 		lblUsername = new JLabel("First Name:");
@@ -146,7 +143,6 @@ public class RPCSCreateAccountFrame {
 		mnEdit = new JMenu("Edit");
 		menuBar.add(mnEdit);
 		
-		mntmEditPersonalDetails = new JMenuItem("Edit Personal Details");
-		mnEdit.add(mntmEditPersonalDetails);
+		
 	}
 }
