@@ -63,4 +63,7 @@
         android:id="@+id/patientName"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    mo
+
 </RelativeLayout>
