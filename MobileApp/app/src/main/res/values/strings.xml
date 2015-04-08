@@ -1,15 +1,13 @@
 <resources>
     <string name="app_name">MobileApp</string>
+    <string name="title_activity_login">Login</string>
 
+    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_create_account">Create Account</string>
-    <string name="title_activity_forgot_password_email">Forgot Password/Email</string>
-    <string name="title_activity_main_menu">Main Menu</string>
-    <string name="title_activity_edit_personal_details">Edit Personal Details</string>
-    <string name="title_activity_set_doctor">Set Doctor</string>
-    <string name="title_activity_enter_symptoms">Enter Symptoms</string>
-    <string-array name="symptoms">
-        <item>Fever</item>
-    </string-array>
-
+    <string name="title_activity_create_account">CreateAccount</string>
+    <string name="title_activity_forgot_password_email">ForgotPasswordEmail</string>
+    <string name="title_activity_main_menu">MainMenu</string>
+    <string name="title_activity_set_doctor">SetDoctor</string>
+    <string name="title_activity_enter_symptoms">EnterSymptoms</string>
+    <string name="title_activity_edit_personal_details">EditPersonalDetails</string>
 </resources>

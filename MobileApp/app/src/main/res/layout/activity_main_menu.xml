@@ -39,4 +39,5 @@
         android:id="@+id/logOutButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
