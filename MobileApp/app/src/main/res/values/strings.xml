@@ -15,4 +15,8 @@
         <item>Dr. Segu</item>
         <item>Dr. Valdez</item>
     </string-array>
+    <string-array name="symptomList">
+        <item>Fever</item>
+        <item>Headache</item>
+    </string-array>
 </resources>
