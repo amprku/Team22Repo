@@ -1,9 +1,13 @@
 package com.android.cse360.mobileapp;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 
 public class EditPersonalDetails extends ActionBarActivity {
@@ -12,6 +16,29 @@ public class EditPersonalDetails extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_personal_details);
+        addListenerOnButton();
+    }
+
+    public void addListenerOnButton() {
+
+
+        Button saveButton;
+
+        final Context context = this;
+
+        saveButton = (Button) findViewById(R.id.saveButton);
+
+
+        saveButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick (View arg0){
+
+                Intent myIntent = new Intent(context, MainMenu.class);
+                startActivity(myIntent);
+            }
+        });
+
     }
 
 

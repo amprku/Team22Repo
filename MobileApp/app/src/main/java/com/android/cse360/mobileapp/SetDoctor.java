@@ -1,9 +1,12 @@
 package com.android.cse360.mobileapp;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.*;
 
 
@@ -23,7 +26,31 @@ public class SetDoctor extends ActionBarActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner.setAdapter(adapter);
+        addListenerOnButton();
     }
+
+    public void addListenerOnButton() {
+
+
+        Button submitButton;
+
+        final Context context = this;
+
+        submitButton = (Button) findViewById(R.id.submitButton);
+
+
+        submitButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick (View arg0){
+
+                Intent myIntent = new Intent(context, MainMenu.class);
+                startActivity(myIntent);
+            }
+        });
+
+    }
+
 
 
 
