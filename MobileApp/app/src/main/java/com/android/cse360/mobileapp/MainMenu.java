@@ -1,9 +1,14 @@
 package com.android.cse360.mobileapp;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 
 public class MainMenu extends ActionBarActivity {
@@ -12,7 +17,65 @@ public class MainMenu extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+        addListenerOnButton();
     }
+
+    public void addListenerOnButton() {
+
+
+        Button setDoctorButton, enterSymptomsButton, editPersonalDetails, logoutButton;
+
+        final Context context = this;
+
+        setDoctorButton = (Button) findViewById(R.id.setDoctorButton);
+        enterSymptomsButton = (Button) findViewById(R.id.symptomButton);
+        editPersonalDetails = (Button) findViewById(R.id.editDetailsButton);
+        logoutButton = (Button) findViewById(R.id.logOutButton);
+
+
+        setDoctorButton.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick (View arg0){
+
+                Intent myIntent = new Intent(context, SetDoctor.class);
+                startActivity(myIntent);
+            }
+        });
+
+        enterSymptomsButton.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick (View arg0){
+
+                Intent myIntent = new Intent(context, EnterSymptoms.class);
+                startActivity(myIntent);
+            }
+        });
+
+        editPersonalDetails.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick (View arg0){
+
+                Intent myIntent = new Intent(context, EditPersonalDetails.class);
+                startActivity(myIntent);
+            }
+        });
+
+        logoutButton.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick (View arg0){
+
+                Intent myIntent = new Intent(context, Login.class);
+                startActivity(myIntent);
+            }
+        });
+
+    }
+
+
 
 
     @Override
