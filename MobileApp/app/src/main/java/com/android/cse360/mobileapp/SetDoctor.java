@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.*;
 
 
 public class SetDoctor extends ActionBarActivity {
@@ -12,7 +13,19 @@ public class SetDoctor extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_doctor);
+
+
+        Spinner spinner = (Spinner) findViewById(R.id.doctorNames);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.doctorNames, android.R.layout.simple_spinner_item);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        spinner.setAdapter(adapter);
     }
+
+
 
 
     @Override

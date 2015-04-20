@@ -12,7 +12,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 public class Login extends ActionBarActivity {
-    Button createAcctButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
