@@ -1,19 +1,70 @@
 package com.android.cse360.mobileapp;
 
-import android.support.v7.app.ActionBarActivity;
+
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 
 public class Login extends ActionBarActivity {
+    Button createAcctButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        addListenerOnButton();
     }
 
+    public void addListenerOnButton() {
+
+        Button createAccountButton, forgotPasswordEmailButton, loginButton;
+
+        final Context context = this;
+
+        createAccountButton = (Button) findViewById(R.id.createAccountButton);
+        forgotPasswordEmailButton = (Button) findViewById(R.id.forgotButton);
+        loginButton = (Button) findViewById(R.id.loginButton);
+
+
+        loginButton.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+
+                Intent myIntent = new Intent(context, MainMenu.class);
+                startActivity(myIntent);
+            }
+
+        });
+
+        forgotPasswordEmailButton.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+
+                Intent myIntent = new Intent(context, ForgotPasswordEmail.class);
+                startActivity(myIntent);
+            }
+
+        });
+
+        createAccountButton.setOnClickListener(new OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+
+                Intent myIntent = new Intent(context, CreateAccount.class);
+                startActivity(myIntent);
+            }
+
+        });
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
