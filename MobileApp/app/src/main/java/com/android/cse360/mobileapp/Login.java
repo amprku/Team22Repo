@@ -38,6 +38,7 @@ public class Login extends ActionBarActivity {
 
                 Intent myIntent = new Intent(context, MainMenu.class);
                 startActivity(myIntent);
+                finish();
             }
 
         });
