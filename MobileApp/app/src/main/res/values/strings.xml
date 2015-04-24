@@ -16,7 +16,16 @@
         <item>Dr. Valdez</item>
     </string-array>
     <string-array name="symptomList">
+        <item>Pain</item>
+        <item>Nausea</item>
+        <item>Fatigue</item>
+        <item>Anxiety</item>
+        <item>Depression</item>
+        <item>Constipation</item>
+        <item>Diarrhea</item>
+        <item>Cough</item>
+        <item>Sore Throat</item>
+        <item>Vomiting</item>
         <item>Fever</item>
-        <item>Headache</item>
     </string-array>
 </resources>
