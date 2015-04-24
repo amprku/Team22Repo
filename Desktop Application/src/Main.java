@@ -1,6 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
-//comment
+
 
 public class Main extends JApplet{
 	public void init(){
